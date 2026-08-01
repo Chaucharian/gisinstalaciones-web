@@ -46,7 +46,7 @@ export default function Services() {
               <div className="w-14 h-14 bg-surface-container-high rounded-lg flex items-center justify-center text-primary transition-colors group-hover:bg-primary-container group-hover:text-on-primary-container">
                 <span className="material-symbols-outlined text-[32px]">counter_1</span>
               </div>
-              <h3 className="font-headline-lg text-[24px] mt-8 mb-3">Nichos de Gas</h3>
+              <h3 className="font-headline-lg text-[24px] mt-8 mb-3">Medidor de Gas</h3>
               <p className="text-secondary">Instalación y adecuación de medidores y reguladores según normativa de Camuzzi.</p>
             </div>
             <div className="absolute bottom-0 right-0 w-32 h-32 opacity-10 group-hover:opacity-20 transition-opacity">

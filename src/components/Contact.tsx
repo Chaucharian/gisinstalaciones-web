@@ -51,7 +51,23 @@ Mensaje: ${formData.mensaje}`;
                 </div>
                 <div>
                   <p className="font-bold text-on-background">Email</p>
-                  <p className="text-secondary">info@gisinstalaciones.com.ar</p>
+                  <p className="text-secondary">instalacionesgis@gmail.com</p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center border border-secondary/10 shrink-0">
+                  <span className="material-symbols-outlined text-primary">call</span>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="font-bold text-on-background">Teléfonos</p>
+                  <a href="tel:02234234799" className="text-secondary hover:text-primary transition-colors flex items-center gap-1.5 w-fit">
+                    <span className="material-symbols-outlined text-[14px]">phone_in_talk</span>
+                    0223 423-4799
+                  </a>
+                  <a href="tel:02236037916" className="text-secondary hover:text-primary transition-colors flex items-center gap-1.5 w-fit">
+                    <span className="material-symbols-outlined text-[14px]">phone_in_talk</span>
+                    0223 603-7916
+                  </a>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -105,7 +121,7 @@ Mensaje: ${formData.mensaje}`;
               >
                 <option>Mantenimiento de Calefón/Termotanque</option>
                 <option>Reparación de Caldera</option>
-                <option>Instalación Nicho de Gas</option>
+                <option>Instalación Medidor de Gas</option>
                 <option>Detección de Fuga / Rehabilitación</option>
                 <option>Obra Nueva / Planos</option>
               </select>
@@ -143,7 +159,7 @@ Mensaje: ${formData.mensaje}`;
                 <p className="text-secondary text-[14px] mt-1">Formosa 3607, Mar del Plata, Buenos Aires</p>
               </div>
             </div>
-            <div className="w-full h-[350px] relative">
+            <div className="w-full h-[250px] md:h-[350px] relative">
               <iframe
                 src="https://maps.google.com/maps?width=100%25&height=600&hl=es&q=Formosa%203607,%20Mar%20del%20Plata+(GIS%20Instalaciones)&t=&z=15&ie=UTF8&iwloc=B&output=embed"
                 className="absolute inset-0 w-full h-full"
@@ -168,14 +184,15 @@ Mensaje: ${formData.mensaje}`;
               ))}
             </div>
             
-            <h3 className="font-headline-lg text-[26px] leading-tight mb-3 text-on-background z-10">
+            <h3 className="font-headline-lg text-[24px] md:text-[26px] leading-tight mb-3 text-on-background z-10">
               ¿Qué tal nuestro servicio?
             </h3>
-            <p className="text-secondary text-[14px] mb-8 max-w-[280px] z-10 leading-relaxed">
-              Tu opinión es muy importante para nosotros. Escanea el código o haz clic para valorarnos.
+            <p className="text-secondary text-[14px] mb-6 md:mb-8 max-w-[280px] z-10 leading-relaxed">
+              <span className="hidden md:inline">Tu opinión es muy importante para nosotros. Escanea el código o haz clic para valorarnos.</span>
+              <span className="md:hidden">Tu opinión nos ayuda a mejorar. Haz clic para dejarnos tu valoración.</span>
             </p>
             
-            <div className="relative p-1 bg-gradient-to-br from-primary/20 to-surface-container-high rounded-2xl mb-8 shadow-md z-10 group hover:scale-105 transition-transform duration-300">
+            <div className="hidden md:block relative p-1 bg-gradient-to-br from-primary/20 to-surface-container-high rounded-2xl mb-8 shadow-md z-10 group hover:scale-105 transition-transform duration-300">
               <div className="bg-white p-3 rounded-xl">
                 <img 
                   src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent("https://www.google.com/search?q=GIS+Instalaciones+Mar+del+Plata#lrd=0x9584df33e23d49e9:0xaaaea4f5fa80abc5,3")}`}

@@ -50,7 +50,12 @@ export default function Navbar() {
           GISINSTALACIONES
         </div>
         <nav className="hidden md:flex gap-8 items-center">
-          {["home", "services", "projects", "contact"].map((id) => (
+          {[
+            { id: "home", label: "Inicio" },
+            { id: "services", label: "Servicios" },
+            { id: "projects", label: "Trabajos Realizados" },
+            { id: "contact", label: "Contacto" }
+          ].map(({ id, label }) => (
             <Link
               key={id}
               href={`#${id}`}
@@ -60,7 +65,7 @@ export default function Navbar() {
                   : "text-secondary hover:text-primary"
               }`}
             >
-              {id.charAt(0).toUpperCase() + id.slice(1)}
+              {label}
             </Link>
           ))}
         </nav>
