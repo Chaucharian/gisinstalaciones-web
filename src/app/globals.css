@@ -1,26 +1,125 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-on-background: #1b1c1c;
+  --color-on-primary: #ffffff;
+  --color-secondary-fixed: #e5e2e1;
+  --color-on-tertiary-container: #3c3d3b;
+  --color-surface-container-highest: #e4e2e2;
+  --color-error: #ba1a1a;
+  --color-tertiary-fixed: #e4e2df;
+  --color-secondary: #5f5e5e;
+  --color-primary-container: #e4a90f;
+  --color-on-error: #ffffff;
+  --color-surface-tint: #7d5700;
+  --color-secondary-fixed-dim: #c8c6c5;
+  --color-error-container: #ffdad6;
+  --color-on-primary-container: #523800;
+  --color-on-primary-fixed-variant: #5f4100;
+  --color-surface-variant: #e4e2e2;
+  --color-on-primary-fixed: #271900;
+  --color-primary: #7d5700;
+  --color-on-error-container: #93000a;
+  --color-outline: #837562;
+  --color-on-tertiary-fixed-variant: #474745;
+  --color-primary-fixed-dim: #feba35;
+  --color-on-secondary-fixed: #1c1b1b;
+  --color-surface-container-high: #e9e8e7;
+  --color-inverse-on-surface: #f2f0f0;
+  --color-tertiary-fixed-dim: #c8c6c4;
+  --color-inverse-primary: #feba35;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e2dfde;
+  --color-primary-fixed: #ffdeab;
+  --color-on-surface-variant: #504534;
+  --color-surface-container: #efeded;
+  --color-on-secondary-container: #636262;
+  --color-surface-bright: #fbf9f8;
+  --color-on-tertiary-fixed: #1b1c1a;
+  --color-on-secondary-fixed-variant: #474746;
+  --color-tertiary: #5e5e5c;
+  --color-surface-container-low: #f5f3f3;
+  --color-on-tertiary: #ffffff;
+  --color-outline-variant: #d5c4ae;
+  --color-surface-container-lowest: #ffffff;
+  --color-background: #fbf9f8;
+  --color-tertiary-container: #a8a7a5;
+  --color-surface: #fbf9f8;
+  --color-on-surface: #1b1c1c;
+  --color-surface-dim: #dbdad9;
+  --color-inverse-surface: #303031;
+
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  --spacing-margin-desktop: 64px;
+  --spacing-margin-mobile: 20px;
+  --spacing-container-max: 1280px;
+  --spacing-gutter: 24px;
+  --spacing-unit: 4px;
+
+  --font-body-lg: var(--font-inter);
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--letter-spacing: 0;
+  --text-body-lg--font-weight: 400;
+
+  --font-label-sm: var(--font-jetbrains-mono);
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--letter-spacing: 0.05em;
+  --text-label-sm--font-weight: 500;
+
+  --font-headline-xl: var(--font-hanken-grotesk);
+  --text-headline-xl: 48px;
+  --text-headline-xl--line-height: 56px;
+  --text-headline-xl--letter-spacing: -0.02em;
+  --text-headline-xl--font-weight: 700;
+
+  --font-button: var(--font-hanken-grotesk);
+  --text-button: 14px;
+  --text-button--line-height: 20px;
+  --text-button--letter-spacing: 0.02em;
+  --text-button--font-weight: 600;
+
+  --font-headline-lg-mobile: var(--font-hanken-grotesk);
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-headline-lg-mobile--letter-spacing: -0.01em;
+  --text-headline-lg-mobile--font-weight: 600;
+
+  --font-body-md: var(--font-inter);
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--letter-spacing: 0;
+  --text-body-md--font-weight: 400;
+
+  --font-headline-lg: var(--font-hanken-grotesk);
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--letter-spacing: -0.01em;
+  --text-headline-lg--font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.technical-grid {
+  background-image: radial-gradient(circle, #837562 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.05;
+}
+
+.bento-card {
+  background: #ffffff;
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bento-card:hover {
+  border-color: #db9c0f;
+  transform: translateY(-4px);
 }
