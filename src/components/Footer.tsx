@@ -1,9 +1,9 @@
+import Logo from "./Logo";
+
 export default function Footer() {
   return (
     <footer className="w-full py-12 px-margin-mobile md:px-margin-desktop flex flex-col items-center gap-8 bg-surface-container-low border-t border-secondary/5">
-      <div className="font-headline-lg text-headline-lg text-primary">
-        GISINSTALACIONES
-      </div>
+      <Logo className="h-16" />
       <nav className="flex flex-wrap justify-center gap-8">
         <a href="#" className="text-secondary font-body-md hover:text-primary transition-colors">
           Terms of Service

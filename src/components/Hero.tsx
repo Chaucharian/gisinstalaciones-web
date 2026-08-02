@@ -1,3 +1,7 @@
+"use client";
+
+import { trackEvent } from "../utils/analytics";
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20" id="home">
@@ -33,6 +37,7 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4 mt-4">
             <a
               href="#contact"
+              onClick={() => trackEvent('hero_cta_presupuesto')}
               className="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-button text-button hover:shadow-lg transition-all flex items-center gap-3"
             >
               Solicitar Presupuesto

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackEvent } from "../utils/analytics";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -18,6 +19,7 @@ Teléfono: ${formData.telefono}
 Servicio: ${formData.servicio}
 Mensaje: ${formData.mensaje}`;
     const encodedText = encodeURIComponent(text);
+    trackEvent('contact_form_submit', { servicio: formData.servicio });
     window.open(`https://wa.me/5492234234799?text=${encodedText}`, "_blank");
   };
 
@@ -60,11 +62,11 @@ Mensaje: ${formData.mensaje}`;
                 </div>
                 <div className="flex flex-col gap-1">
                   <p className="font-bold text-on-background">Teléfonos</p>
-                  <a href="tel:02234234799" className="text-secondary hover:text-primary transition-colors flex items-center gap-1.5 w-fit">
+                  <a href="tel:02234234799" onClick={() => trackEvent('phone_click', { number: '0223 423-4799' })} className="text-secondary hover:text-primary transition-colors flex items-center gap-1.5 w-fit">
                     <span className="material-symbols-outlined text-[14px]">phone_in_talk</span>
                     0223 423-4799
                   </a>
-                  <a href="tel:02236037916" className="text-secondary hover:text-primary transition-colors flex items-center gap-1.5 w-fit">
+                  <a href="tel:02236037916" onClick={() => trackEvent('phone_click', { number: '0223 603-7916' })} className="text-secondary hover:text-primary transition-colors flex items-center gap-1.5 w-fit">
                     <span className="material-symbols-outlined text-[14px]">phone_in_talk</span>
                     0223 603-7916
                   </a>
@@ -209,6 +211,7 @@ Mensaje: ${formData.mensaje}`;
               href="https://www.google.com/search?q=GIS+Instalaciones+Mar+del+Plata#lrd=0x9584df33e23d49e9:0xaaaea4f5fa80abc5,3"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent('review_click')}
               className="z-10 bg-white border border-secondary/20 text-on-background px-8 py-4 rounded-xl font-button text-button hover:bg-surface-container-low hover:shadow-lg transition-all duration-300 flex items-center gap-3 w-full justify-center group"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24">

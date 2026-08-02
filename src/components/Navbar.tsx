@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Logo from "./Logo";
+import { trackEvent } from "../utils/analytics";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -46,9 +48,9 @@ export default function Navbar() {
       }`}
     >
       <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-full">
-        <div className="font-headline-lg text-headline-lg font-bold text-primary">
-          GISINSTALACIONES
-        </div>
+        <Link href="#home" className="hover:opacity-90 transition-opacity">
+          <Logo className="h-[42px]" />
+        </Link>
         <nav className="hidden md:flex gap-8 items-center">
           {[
             { id: "home", label: "Inicio" },
@@ -70,11 +72,9 @@ export default function Navbar() {
           ))}
         </nav>
         <div className="flex items-center gap-4">
-          <button className="material-symbols-outlined text-secondary hover:text-primary transition-colors">
-            chat
-          </button>
           <a
             href="tel:02234234799"
+            onClick={() => trackEvent('emergency_call_click', { location: 'navbar' })}
             className="hidden sm:flex bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-button text-button hover:opacity-90 transition-all items-center gap-2"
           >
             <span className="material-symbols-outlined text-[18px]">

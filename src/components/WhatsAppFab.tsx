@@ -1,7 +1,12 @@
+"use client";
+
+import { trackEvent } from "../utils/analytics";
+
 export default function WhatsAppFab() {
   return (
     <a
       href="https://wa.me/5492234234799"
+      onClick={() => trackEvent('whatsapp_click')}
       className="fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform z-50 text-white"
     >
       <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">

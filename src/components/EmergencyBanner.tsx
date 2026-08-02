@@ -1,3 +1,7 @@
+"use client";
+
+import { trackEvent } from "../utils/analytics";
+
 export default function EmergencyBanner() {
   return (
     <section className="bg-on-background text-white py-20 relative overflow-hidden">
@@ -22,6 +26,7 @@ export default function EmergencyBanner() {
           <div className="flex flex-col sm:flex-row gap-6">
             <a
               href="https://wa.me/5492234234799"
+              onClick={() => trackEvent('whatsapp_click', { location: 'emergency_banner' })}
               className="bg-[#25D366] text-white px-10 py-5 rounded-lg font-button text-button hover:scale-105 transition-all flex items-center justify-center gap-3"
             >
               <span className="material-symbols-outlined">message</span>
@@ -29,6 +34,7 @@ export default function EmergencyBanner() {
             </a>
             <a
               href="tel:02234234799"
+              onClick={() => trackEvent('emergency_call_click', { location: 'emergency_banner' })}
               className="bg-primary-container text-on-primary-container px-10 py-5 rounded-lg font-button text-button hover:scale-105 transition-all flex items-center justify-center gap-3"
             >
               <span className="material-symbols-outlined">call</span>
