@@ -29,9 +29,9 @@ export default function Footer() {
           <span className="material-symbols-outlined text-[20px]">verified_user</span>
         </a>
       </div>
-      <p className="text-secondary font-body-md text-center max-w-2xl leading-relaxed">
-        © 2024 GISINSTALACIONES. Technical Certifications: NAG-200, Registrado en Camuzzi. Professional Residential Gas Services. Todos los derechos reservados.
-      </p>
+      <div className="text-secondary/60 text-[12px] text-center max-w-2xl mt-8">
+        © 2024 GISINSTALACIONES. Technical Certifications: <a href="https://www.enargas.gov.ar/secciones/normativa/pdf/normas-discusion/IF-2025-103868516-APN-GIYN-ENARGAS.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary">NAG-200</a>, Registrado en Camuzzi. Professional Residential Gas Services. Todos los derechos reservados.
+      </div>
     </footer>
   );
 }

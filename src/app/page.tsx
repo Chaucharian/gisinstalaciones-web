@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
 import EmergencyBanner from "@/components/EmergencyBanner";
+import Trayectoria from "@/components/Trayectoria";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppFab from "@/components/WhatsAppFab";
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Services />
+      <Trayectoria />
       <Portfolio />
       <EmergencyBanner />
       <Contact />

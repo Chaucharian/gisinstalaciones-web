@@ -190,11 +190,10 @@ Mensaje: ${formData.mensaje}`;
               ¿Qué tal nuestro servicio?
             </h3>
             <p className="text-secondary text-[14px] mb-6 md:mb-8 max-w-[280px] z-10 leading-relaxed">
-              <span className="hidden md:inline">Tu opinión es muy importante para nosotros. Escanea el código o haz clic para valorarnos.</span>
-              <span className="md:hidden">Tu opinión nos ayuda a mejorar. Haz clic para dejarnos tu valoración.</span>
+              Tu opinión es muy importante para nosotros. Escanea el código o haz clic para valorarnos.
             </p>
             
-            <div className="hidden md:block relative p-1 bg-gradient-to-br from-primary/20 to-surface-container-high rounded-2xl mb-8 shadow-md z-10 group hover:scale-105 transition-transform duration-300">
+            <div className="relative p-1 bg-gradient-to-br from-primary/20 to-surface-container-high rounded-2xl mb-8 shadow-md z-10 group hover:scale-105 transition-transform duration-300">
               <div className="bg-white p-3 rounded-xl">
                 <img 
                   src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent("https://www.google.com/search?q=GIS+Instalaciones+Mar+del+Plata#lrd=0x9584df33e23d49e9:0xaaaea4f5fa80abc5,3")}`}

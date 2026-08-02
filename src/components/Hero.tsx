@@ -22,7 +22,7 @@ export default function Hero() {
           <div className="flex items-center gap-3">
             <span className="inline-block w-12 h-px bg-primary"></span>
             <span className="font-label-sm text-label-sm text-primary uppercase tracking-widest">
-              NAG-200 | Registrado en Camuzzi
+              <a href="https://www.enargas.gov.ar/secciones/normativa/pdf/normas-discusion/IF-2025-103868516-APN-GIYN-ENARGAS.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline">NAG-200</a> | Registrado en Camuzzi
             </span>
           </div>
           <h1 className="font-headline-xl text-[40px] md:text-headline-xl leading-tight text-on-background drop-shadow-sm">

@@ -8,7 +8,7 @@ export default function Services() {
               Nuestros Servicios Técnicos
             </h2>
             <p className="font-body-md text-body-md text-secondary">
-              Soluciones integrales bajo normas NAG-200 para el correcto funcionamiento
+              Soluciones integrales bajo normas <a href="https://www.enargas.gov.ar/secciones/normativa/pdf/normas-discusion/IF-2025-103868516-APN-GIYN-ENARGAS.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary">NAG-200</a> para el correcto funcionamiento
               y seguridad de sus artefactos a gas.
             </p>
           </div>
