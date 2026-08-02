@@ -1,0 +1,23 @@
+<svg width="450" height="120" viewBox="0 0 450 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .text-gis { font-family: 'Hanken Grotesk', system-ui, sans-serif; font-weight: 900; font-size: 72px; fill: #1b1c1c; letter-spacing: 0.05em; }
+      .text-inst { font-family: 'Hanken Grotesk', system-ui, sans-serif; font-weight: 700; font-size: 22px; fill: #7d5700; letter-spacing: 0.25em; }
+    </style>
+  </defs>
+
+  <!-- Gas Flame Icon -->
+  <g transform="translate(10, 15) scale(3.5)">
+    <!-- Outer Flame -->
+    <path d="M12 22C16.4183 22 20 18.4183 20 14C20 9.58172 12 2 12 2C12 2 4 9.58172 4 14C4 18.4183 7.58172 22 12 22Z" fill="#7d5700" fill-opacity="0.9" />
+    <!-- Middle Cutout (White) -->
+    <path d="M12 22C14.7614 22 17 19.7614 17 17C17 14.2386 12 9 12 9C12 9 7 14.2386 7 17C7 19.7614 9.23858 22 12 22Z" fill="white" />
+    <!-- Inner Flame -->
+    <path d="M12 19.5C13.3807 19.5 14.5 18.3807 14.5 17C14.5 15.6193 12 12.5 12 12.5C12 12.5 9.5 15.6193 9.5 17C9.5 18.3807 10.6193 19.5 12 19.5Z" fill="#7d5700" />
+  </g>
+
+  <!-- Texts -->
+  <!-- x=105 to give space after the 84px wide icon -->
+  <text x="110" y="70" class="text-gis">GIS</text>
+  <text x="113" y="100" class="text-inst">INSTALACIONES</text>
+</svg>
